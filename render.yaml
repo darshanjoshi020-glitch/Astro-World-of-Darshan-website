@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: astro-world-of-darshan
+    runtime: node
+    plan: starter
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NEXT_PUBLIC_SUPABASE_URL
+        sync: false
+      - key: NEXT_PUBLIC_SUPABASE_ANON_KEY
+        sync: false
+      - key: PROKERALA_CLIENT_ID
+        sync: false
+      - key: PROKERALA_CLIENT_SECRET
+        sync: false
